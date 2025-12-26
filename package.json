@@ -1,0 +1,23 @@
+{
+  "name": "secret-santa-wishlist-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauroanastasi/secret-santa-wishlist-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauroanastasi/secret-santa-wishlist-frontend/issues"
+  },
+  "homepage": "https://github.com/mauroanastasi/secret-santa-wishlist-frontend#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.13.2"
+  }
+}
