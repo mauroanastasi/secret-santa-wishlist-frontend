@@ -1,0 +1,198 @@
+/* 
+   MOBILE FIRST - PublicWishlistPage
+    */
+.public-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px 0;
+}
+
+.loading-state,
+.error-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-state p,
+.error-state p {
+    color: white;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.error-state {
+    background: white;
+    border-radius: 12px;
+    color: #111827;
+}
+
+.error-state h2 {
+    color: #ef4444;
+    margin-bottom: 16px;
+}
+
+.wishlist-header {
+    margin-bottom: 20px;
+}
+
+.header-content h1 {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    color: #111827;
+}
+
+.owner-name {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+}
+
+.wishlist-badge {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.gifts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 16px;
+}
+
+.gifts-info p {
+    margin: 0;
+    font-size: 15px;
+    color: #374151;
+}
+
+.gifts-info strong {
+    color: #667eea;
+    font-size: 18px;
+}
+
+.gifts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6b7280;
+    background: white;
+}
+
+.reserve-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reserve-gift-name {
+    font-size: 18px;
+    color: #111827;
+    text-align: center;
+    padding: 16px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.form-hint {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.modal-actions button {
+    width: 100%;
+}
+
+/* 
+   TABLET - 768px+
+    */
+@media (min-width: 768px) {
+    .public-page {
+        padding: 32px 0;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .wishlist-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wishlist-badge {
+        margin-top: 0;
+    }
+
+    .gifts-info {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .gifts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .modal-actions {
+        flex-direction: row;
+    }
+
+    .modal-actions button {
+        flex: 1;
+    }
+}
+
+/* 
+   DESKTOP - 1024px+
+    */
+@media (min-width: 1024px) {
+    .header-content h1 {
+        font-size: 36px;
+    }
+
+    .gifts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
