@@ -1,0 +1,89 @@
+/* 
+   MOBILE FIRST - GiftForm
+    */
+.gift-form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 100%;
+}
+
+.gift-form-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #111827;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-error {
+    display: block;
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.form-image-preview {
+    margin-top: 12px;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.form-actions button {
+    width: 100%;
+}
+
+/* 
+   TABLET - 768px+
+    */
+@media (min-width: 768px) {
+    .gift-form {
+        padding: 32px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-row {
+        flex-direction: row;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    .form-actions {
+        flex-direction: row;
+    }
+
+    .form-actions button {
+        flex: 1;
+    }
+}
+
+/* 
+   DESKTOP - 1024px+
+    */
+@media (min-width: 1024px) {
+    .gift-form {
+        max-width: 700px;
+    }
+}
