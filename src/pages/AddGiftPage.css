@@ -1,0 +1,58 @@
+/* 
+   MOBILE FIRST - AddGiftPage
+    */
+.add-gift-page {
+    min-height: 100vh;
+    padding: 16px 0;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.btn-back {
+    background: transparent;
+    border: none;
+    color: #667eea;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px;
+    min-height: auto;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #764ba2;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 24px;
+    color: #111827;
+}
+
+/* 
+   TABLET - 768px+
+    */
+@media (min-width: 768px) {
+    .add-gift-page {
+        padding: 32px 0;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+}
+
+/* 
+   DESKTOP - 1024px+
+    */
+@media (min-width: 1024px) {
+    .page-title {
+        font-size: 32px;
+    }
+}
