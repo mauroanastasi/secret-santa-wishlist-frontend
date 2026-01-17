@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-
+import AddGiftPage from './pages/AddGiftPage'
+import PublicWishlistPage from './pages/PublicWishlistPage'
 
 function App() {
   return (
