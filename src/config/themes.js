@@ -15,4 +15,12 @@ export const themes = {
         primaryColor: '#f472b6',
         textColor: '#ffffff',
     },
+    compleanno: {
+        name: 'my comple',
+        emoji: '🎉',
+        gradientStart: '#f59e0b',
+        gradientEnd: '#ec4899',
+        primaryColor: '#fbbf24',
+        textColor: '#ffffff',
+    },
 };

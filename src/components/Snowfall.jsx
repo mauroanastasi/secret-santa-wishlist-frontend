@@ -4,38 +4,52 @@ import './Snowfall.css'
 
 function Snowfall() {
     const { theme } = useTheme();
-    const [snowflakes, setSnowflakes] = useState([]);
+    const [particles, setParticles] = useState([]);
 
     useEffect(() => {
-        // Crea 30 fiocchi di neve iniziali solo se non è tema bebe
-        if (theme !== 'bebe') {
-            const initialSnowflakes = Array.from({ length: 30 }, (_, i) => ({
+        // Crea particelle diverse in base al tema
+        if (theme === 'bebe') {
+            // Tema bebè: niente particelle
+            setParticles([]);
+        } else if (theme === 'compleanno') {
+            // Tema compleanno: coriandoli
+            const confetti = Array.from({ length: 50 }, (_, i) => ({
+                id: i,
+                left: Math.random() * 100,
+                delay: Math.random() * 2,
+                duration: 8 + Math.random() * 4,
+                size: 0.8 + Math.random() * 1.2,
+                emoji: ['🎉', '🎊', '🎈', '🎀'][Math.floor(Math.random() * 4)]
+            }));
+            setParticles(confetti);
+        } else {
+            // Tema natale: neve
+            const snowflakes = Array.from({ length: 30 }, (_, i) => ({
                 id: i,
                 left: Math.random() * 100,
                 delay: Math.random() * 2,
                 duration: 10 + Math.random() * 5,
-                size: 1 + Math.random() * 1.5
+                size: 1 + Math.random() * 1.5,
+                emoji: '❄️'
             }));
-            setSnowflakes(initialSnowflakes);
-        } else {
-            setSnowflakes([]);
+            setParticles(snowflakes);
         }
     }, [theme]);
 
     return (
         <div className="snowfall-container">
-            {snowflakes.map(flake => (
+            {particles.map(particle => (
                 <div
-                    key={flake.id}
-                    className="snowflake"
+                    key={particle.id}
+                    className={`particle ${theme === 'compleanno' ? 'confetti' : 'snowflake'}`}
                     style={{
-                        left: `${flake.left}%`,
-                        animationDelay: `${flake.delay}s`,
-                        animationDuration: `${flake.duration}s`,
-                        fontSize: `${flake.size}rem`
+                        left: `${particle.left}%`,
+                        animationDelay: `${particle.delay}s`,
+                        animationDuration: `${particle.duration}s`,
+                        fontSize: `${particle.size}rem`
                     }}
                 >
-                    ❄️
+                    {particle.emoji}
                 </div>
             ))}
         </div>

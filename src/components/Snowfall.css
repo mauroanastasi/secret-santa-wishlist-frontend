@@ -9,7 +9,9 @@
     overflow: hidden;
 }
 
-.snowflake {
+.snowflake,
+.confetti,
+.particle {
     position: absolute;
     top: -10px;
     display: inline-block;
@@ -30,7 +32,7 @@
     }
 }
 
-/* Effetto di movimento laterale più naturale */
+/* Effetto di movimento laterale più naturale per neve */
 .snowflake:nth-child(3n) {
     animation: snowfall-left linear infinite;
 }
@@ -60,5 +62,71 @@
     to {
         transform: translateY(100vh) translateX(0);
         opacity: 0.3;
+    }
+}
+
+/* Animazione coriandoli - movimento rotante e casuale */
+.confetti {
+    animation: confetti-fall linear infinite !important;
+    text-shadow: none;
+    opacity: 1;
+}
+
+@keyframes confetti-fall {
+    from {
+        transform: translateY(-10px) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) rotateZ(180deg) scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100vh) rotateZ(360deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.confetti:nth-child(2n) {
+    animation: confetti-fall-left linear infinite !important;
+}
+
+@keyframes confetti-fall-left {
+    from {
+        transform: translateY(-10px) translateX(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(-80px) rotateZ(-180deg) scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100vh) translateX(-150px) rotateZ(-360deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.confetti:nth-child(3n) {
+    animation: confetti-fall-right linear infinite !important;
+}
+
+@keyframes confetti-fall-right {
+    from {
+        transform: translateY(-10px) translateX(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(80px) rotateZ(180deg) scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100vh) translateX(150px) rotateZ(360deg) scale(0.5);
+        opacity: 0;
     }
 }
