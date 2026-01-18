@@ -13,7 +13,7 @@
 .confetti,
 .particle {
     position: absolute;
-    top: -10px;
+    top: 0;
     display: inline-block;
     opacity: 0.8;
     animation: snowfall linear infinite;
@@ -22,7 +22,7 @@
 
 @keyframes snowfall {
     from {
-        transform: translateY(-10px) translateX(0);
+        transform: translateY(-50px) translateX(0);
         opacity: 1;
     }
 
@@ -39,7 +39,7 @@
 
 @keyframes snowfall-left {
     from {
-        transform: translateY(-10px) translateX(0);
+        transform: translateY(-50px) translateX(0);
         opacity: 1;
     }
 
@@ -55,7 +55,7 @@
 
 @keyframes snowfall-straight {
     from {
-        transform: translateY(-10px) translateX(0);
+        transform: translateY(-50px) translateX(0);
         opacity: 1;
     }
 
@@ -70,12 +70,11 @@
     animation: confetti-fall linear infinite !important;
     text-shadow: none;
     opacity: 1;
-    top: -50px !important;
 }
 
 @keyframes confetti-fall {
     from {
-        transform: translateY(0) rotate(0deg) scale(1);
+        transform: translateY(-50px) rotate(0deg) scale(1);
         opacity: 1;
     }
 
@@ -92,12 +91,11 @@
 
 .confetti:nth-child(2n) {
     animation: confetti-fall-left linear infinite !important;
-    top: -50px !important;
 }
 
 @keyframes confetti-fall-left {
     from {
-        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+        transform: translateY(-50px) translateX(0) rotate(0deg) scale(1);
         opacity: 1;
     }
 
@@ -114,12 +112,11 @@
 
 .confetti:nth-child(3n) {
     animation: confetti-fall-right linear infinite !important;
-    top: -50px !important;
 }
 
 @keyframes confetti-fall-right {
     from {
-        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+        transform: translateY(-50px) translateX(0) rotate(0deg) scale(1);
         opacity: 1;
     }
 
