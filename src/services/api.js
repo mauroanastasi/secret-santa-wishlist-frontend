@@ -1,5 +1,5 @@
 // URL base del backend Express
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = import.meta.env.VITE_FIRST_SANTA || 'http://localhost:3000/api';
 
 const handleResponse = async (response) => {
     if (!response.ok) {
