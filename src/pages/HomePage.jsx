@@ -124,18 +124,22 @@ function HomePage() {
 
     return (
         <div className="home-page">
-            <button
-                className="theme-button"
-                onClick={() => setShowThemeSelector(true)}
-                title="Cambia tema"
-            >
-                🎨 Temi
-            </button>
+            {showCreateForm && (
+                <>
+                    <button
+                        className="theme-button"
+                        onClick={() => setShowThemeSelector(true)}
+                        title="Cambia tema"
+                    >
+                        🎨 Temi
+                    </button>
 
-            <ThemeSelector
-                isOpen={showThemeSelector}
-                onClose={() => setShowThemeSelector(false)}
-            />
+                    <ThemeSelector
+                        isOpen={showThemeSelector}
+                        onClose={() => setShowThemeSelector(false)}
+                    />
+                </>
+            )}
 
             <div className="container">
                 <h1 className="page-title">{currentTheme.emoji} {currentTheme.name}</h1>
