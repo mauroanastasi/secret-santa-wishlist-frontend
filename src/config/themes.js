@@ -1,6 +1,6 @@
 export const themes = {
     natale: {
-        name: 'Natale',
+        name: 'Secret Santa',
         emoji: '🎅',
         gradientStart: '#1e3a8a',
         gradientEnd: '#06b6d4',
@@ -8,7 +8,7 @@ export const themes = {
         textColor: '#ffffff',
     },
     bebe: {
-        name: 'Bebè Secret',
+        name: 'Secret Bebè',
         emoji: '👶',
         gradientStart: '#ec4899',
         gradientEnd: '#60a5fa',
