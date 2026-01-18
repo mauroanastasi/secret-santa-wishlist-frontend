@@ -1,18 +1,24 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import GiftCard from '../components/GiftCard'
+import ThemeSelector from '../components/ThemeSelector'
+import { useTheme } from '../context/ThemeContext'
+import { themes } from '../config/themes'
 import { createWishlist, publishWishlist, deleteGift } from '../services/api'
 import { saveDraft, loadDraft, clearDraft, hasDraft } from '../utils/localStorage'
 import './HomePage.css'
 
 function HomePage() {
     const navigate = useNavigate();
+    const { theme } = useTheme();
+    const currentTheme = themes[theme];
 
     const [wishlist, setWishlist] = useState(null);
     const [gifts, setGifts] = useState([]);
     const [isPublished, setIsPublished] = useState(false);
     const [secretLink, setSecretLink] = useState('');
     const [showLinkModal, setShowLinkModal] = useState(false);
+    const [showThemeSelector, setShowThemeSelector] = useState(false);
 
     const [showCreateForm, setShowCreateForm] = useState(false);
     const [title, setTitle] = useState('');
@@ -118,8 +124,21 @@ function HomePage() {
 
     return (
         <div className="home-page">
+            <button
+                className="theme-button"
+                onClick={() => setShowThemeSelector(true)}
+                title="Cambia tema"
+            >
+                🎨 Temi
+            </button>
+
+            <ThemeSelector
+                isOpen={showThemeSelector}
+                onClose={() => setShowThemeSelector(false)}
+            />
+
             <div className="container">
-                <h1 className="page-title">🎅 Secret Santa Wishlist</h1>
+                <h1 className="page-title">{currentTheme.emoji} {currentTheme.name}</h1>
 
                 {showCreateForm && (
                     <div className="card">

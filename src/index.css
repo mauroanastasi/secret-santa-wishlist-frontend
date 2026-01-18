@@ -17,6 +17,27 @@
   position: relative;
 }
 
+.theme-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: all 0.2s;
+}
+
+.theme-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* 
    STILI BASE - MOBILE FIRST
    (320px - 767px)
@@ -28,9 +49,11 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
-  background: linear-gradient(180deg, #1e3a8a 0%, #06b6d4 100%);
+  background: linear-gradient(180deg, var(--gradient-start, #1e3a8a) 0%, var(--gradient-end, #06b6d4) 100%);
   background-attachment: fixed;
   min-height: 100vh;
+  --gradient-start: #1e3a8a;
+  --gradient-end: #06b6d4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

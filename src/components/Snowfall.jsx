@@ -1,20 +1,26 @@
 import { useEffect, useState } from 'react'
+import { useTheme } from '../context/ThemeContext'
 import './Snowfall.css'
 
 function Snowfall() {
+    const { theme } = useTheme();
     const [snowflakes, setSnowflakes] = useState([]);
 
     useEffect(() => {
-        // Crea 30 fiocchi di neve iniziali
-        const initialSnowflakes = Array.from({ length: 30 }, (_, i) => ({
-            id: i,
-            left: Math.random() * 100,
-            delay: Math.random() * 2,
-            duration: 10 + Math.random() * 5,
-            size: 1 + Math.random() * 1.5
-        }));
-        setSnowflakes(initialSnowflakes);
-    }, []);
+        // Crea 30 fiocchi di neve iniziali solo se non è tema bebe
+        if (theme !== 'bebe') {
+            const initialSnowflakes = Array.from({ length: 30 }, (_, i) => ({
+                id: i,
+                left: Math.random() * 100,
+                delay: Math.random() * 2,
+                duration: 10 + Math.random() * 5,
+                size: 1 + Math.random() * 1.5
+            }));
+            setSnowflakes(initialSnowflakes);
+        } else {
+            setSnowflakes([]);
+        }
+    }, [theme]);
 
     return (
         <div className="snowfall-container">
