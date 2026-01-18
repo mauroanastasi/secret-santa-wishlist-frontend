@@ -43,7 +43,7 @@ function GiftCard({ gift, onEdit, onDelete, onReserve, isPublic = false }) {
                     Vedi prodotto →
                 </a>
 
-                {gift.is_reserved && (
+                {!!gift.is_reserved && (
                     <>
                         <div className="reserved-badge">🎁 Prenotato</div>
                         {gift.reservation_message && (
