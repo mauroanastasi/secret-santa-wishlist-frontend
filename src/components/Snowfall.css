@@ -70,11 +70,12 @@
     animation: confetti-fall linear infinite !important;
     text-shadow: none;
     opacity: 1;
+    top: -50px !important;
 }
 
 @keyframes confetti-fall {
     from {
-        transform: translateY(-10px) rotate(0deg) scale(1);
+        transform: translateY(0) rotate(0deg) scale(1);
         opacity: 1;
     }
 
@@ -91,11 +92,12 @@
 
 .confetti:nth-child(2n) {
     animation: confetti-fall-left linear infinite !important;
+    top: -50px !important;
 }
 
 @keyframes confetti-fall-left {
     from {
-        transform: translateY(-10px) translateX(0) rotate(0deg) scale(1);
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
         opacity: 1;
     }
 
@@ -112,11 +114,12 @@
 
 .confetti:nth-child(3n) {
     animation: confetti-fall-right linear infinite !important;
+    top: -50px !important;
 }
 
 @keyframes confetti-fall-right {
     from {
-        transform: translateY(-10px) translateX(0) rotate(0deg) scale(1);
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
         opacity: 1;
     }
 
