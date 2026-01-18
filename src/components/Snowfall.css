@@ -9,11 +9,9 @@
     overflow: hidden;
 }
 
-.snowflake,
-.confetti,
-.particle {
+.snowflake {
     position: absolute;
-    top: 0;
+    top: -10px;
     display: inline-block;
     opacity: 0.8;
     animation: snowfall linear infinite;
@@ -22,7 +20,7 @@
 
 @keyframes snowfall {
     from {
-        transform: translateY(-50px) translateX(0);
+        transform: translateY(-10px) translateX(0);
         opacity: 1;
     }
 
@@ -32,14 +30,14 @@
     }
 }
 
-/* Effetto di movimento laterale più naturale per neve */
+/* Effetto di movimento laterale più naturale */
 .snowflake:nth-child(3n) {
     animation: snowfall-left linear infinite;
 }
 
 @keyframes snowfall-left {
     from {
-        transform: translateY(-50px) translateX(0);
+        transform: translateY(-10px) translateX(0);
         opacity: 1;
     }
 
@@ -55,78 +53,12 @@
 
 @keyframes snowfall-straight {
     from {
-        transform: translateY(-50px) translateX(0);
+        transform: translateY(-10px) translateX(0);
         opacity: 1;
     }
 
     to {
         transform: translateY(100vh) translateX(0);
         opacity: 0.3;
-    }
-}
-
-/* Animazione coriandoli - movimento rotante e casuale */
-.confetti {
-    animation: confetti-fall linear infinite !important;
-    text-shadow: none;
-    opacity: 1;
-}
-
-@keyframes confetti-fall {
-    from {
-        transform: translateY(-50px) rotate(0deg) scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(50vh) rotateZ(180deg) scale(0.9);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(100vh) rotateZ(360deg) scale(0.5);
-        opacity: 0;
-    }
-}
-
-.confetti:nth-child(2n) {
-    animation: confetti-fall-left linear infinite !important;
-}
-
-@keyframes confetti-fall-left {
-    from {
-        transform: translateY(-50px) translateX(0) rotate(0deg) scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(50vh) translateX(-80px) rotateZ(-180deg) scale(0.9);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(100vh) translateX(-150px) rotateZ(-360deg) scale(0.5);
-        opacity: 0;
-    }
-}
-
-.confetti:nth-child(3n) {
-    animation: confetti-fall-right linear infinite !important;
-}
-
-@keyframes confetti-fall-right {
-    from {
-        transform: translateY(-50px) translateX(0) rotate(0deg) scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translateY(50vh) translateX(80px) rotateZ(180deg) scale(0.9);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(100vh) translateX(150px) rotateZ(360deg) scale(0.5);
-        opacity: 0;
     }
 }
