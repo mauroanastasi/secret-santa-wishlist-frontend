@@ -16,7 +16,7 @@ export const themes = {
         textColor: '#ffffff',
     },
     compleanno: {
-        name: 'my comple',
+        name: 'H Bday!',
         emoji: '🎉',
         gradientStart: '#f59e0b',
         gradientEnd: '#ec4899',
