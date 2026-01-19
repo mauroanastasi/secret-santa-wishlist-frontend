@@ -23,4 +23,12 @@ export const themes = {
         primaryColor: '#fbbf24',
         textColor: '#ffffff',
     },
+    neutro: {
+        name: 'Neutral',
+        emoji: '',
+        gradientStart: '#cbc7e1',
+        gradientEnd: 'hsl(330, 10%, 40%)',
+        primaryColor: 'rgb(155, 146, 123)',
+        textColor: '#ffffff',
+    },
 };
