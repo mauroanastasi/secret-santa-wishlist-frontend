@@ -8,7 +8,7 @@ function Snowfall() {
 
     useEffect(() => {
         // Crea particelle diverse in base al tema
-        if (theme === 'bebe' || theme === 'neutral') {
+        if (theme === 'bebe' || theme === 'neutro') {
             // Tema bebè: niente particelle
             setParticles([]);
         } else if (theme === 'compleanno') {
